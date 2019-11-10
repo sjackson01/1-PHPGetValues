@@ -1,15 +1,4 @@
 
-<?php
-//Add name value from $_GET to $name variable 
-$name = $_GET['name'];
-//Add  lang value from $_GET to $lang variable 
-$lang = $_GET['lang'];
-
-//Echo $name and $lang variables 
-echo '<p>' . $name . '</p>';
-echo '<p>' . $lang . '</p>';
-?>
-
 <html lang="en">
 
 <head>
@@ -20,6 +9,22 @@ echo '<p>' . $lang . '</p>';
 </head>
 
 <body>
+
+<?php
+    //Add variable is set check to avoid "variable undefined" error
+    if(isset($_GET['name'], $_GET['lang'])){
+        //Add name value from $_GET to $name variable 
+        $name = $_GET['name'];
+        //Add  lang value from $_GET to $lang variable 
+        $lang = $_GET['lang'];
+
+        //Echo $name and $lang variables 
+        echo '<p>' . $name . '</p>';
+        echo '<p>' . $lang . '</p>';
+    }
+?>
+
+
     <!-- Form Input -->
     <form method="get" action="index.php">
     <input type="text" name="name">
