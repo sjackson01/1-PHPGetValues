@@ -9,7 +9,12 @@
 </head>
 
 <body>
-
+    <!-- Form Input -->
+    <form method="get" action="index.php">
+    <input type="text" name="name">
+    <input type="text" name="lang">
+    <input type="submit" value="submit">
+    </form>
 
 </body>
 
